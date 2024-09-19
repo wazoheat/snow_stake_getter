@@ -21,9 +21,9 @@ def save_images(verbose):
         pl.Path(entry).mkdir(parents=True, exist_ok=True)
         if verbose:
             print(f"getting {entry}/{nowstr}.jpg from {conf[entry]['url']}")
-        result = urllib.request.urlretrieve(conf[entry]["url"], f"{entry}/{nowstr}.jpg")
+        _,result = urllib.request.urlretrieve(conf[entry]["url"], f"{entry}/{nowstr}.jpg")
         if verbose:
-            print(f"{result=}")
+            print(f"{result.as_string(unixfrom=True)=}")
 
 
 if __name__ == "__main__":
