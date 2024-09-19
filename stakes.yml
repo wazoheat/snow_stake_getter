@@ -1,4 +1,37 @@
-breck:
-  url: https://www.breckenridge.com/the-mountain/mountain-conditions/mountain-cams.aspx
 abasin:
-  url: https://www.arapahoebasin.com/mountain-cams/
+  url: https://webcams.opensnow.com/current/2017.jpg
+aspen:
+  url: https://webcams.opensnow.com/current/2698.jpg
+aspenhighlands:
+  url: https://webcams.opensnow.com/current/2736.jpg
+beavercreek:
+  url: https://webcams.opensnow.com/current/609.jpg
+breckenridge:
+  url: https://webcams.opensnow.com/current/607.jpg
+buttermilk:
+  url: https://webcams.opensnow.com/current/3029.jpg
+copper:
+  url: https://webcams.opensnow.com/current/3625.jpg
+keystone:
+  url: https://webcams.opensnow.com/current/606.jpg
+monarch:
+  url: https://webcams.opensnow.com/current/2593.jpg
+powderhorn:
+  url: https://webcams.opensnow.com/current/1986.jpg
+purgatory:
+  url: https://webcams.opensnow.com/current/493.jpg
+snowmass:
+  url: https://webcams.opensnow.com/current/2697.jpg
+steamboatsummit:
+  url: https://webcams.opensnow.com/current/3402.jpg
+steamboatmid:
+  url: https://webcams.opensnow.com/current/2780.jpg
+sunlight:
+  url: https://webcams.opensnow.com/current/3337.jpg
+vailmid:
+  url: https://webcams.opensnow.com/current/2452.jpg
+vailbluesky:
+  url: https://webcams.opensnow.com/current/608.jpg
+winterpark:
+  url: https://webcams.opensnow.com/current/2006.jpg
+
