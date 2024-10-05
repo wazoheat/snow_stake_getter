@@ -1,9 +1,13 @@
 import argparse
 import datetime as dt
+import glob
+import os
 import pathlib as pl
 import urllib.request
 import yaml
+import sys
 
+from PIL import Image
 
 def save_images(verbose,keep):
     nowstr=dt.datetime.utcnow().strftime('%Y%m%d_%H%M%S')
@@ -18,19 +22,41 @@ def save_images(verbose,keep):
     urllib.request.install_opener(opener)
 
     for entry in conf:
+        # Check for the most recent image; we will use this later to make sure it's not a duplicate
+        latest_file = ''
+        if os.path.isdir(entry):
+            list_of_files = glob.iglob(f'{entry}/*jpg')
+            latest_file = max(list_of_files, key=os.path.getctime)
+
         pl.Path(entry).mkdir(parents=True, exist_ok=True)
         # If you don't include this "?datestring", the server feeds you an old/cached image
         url=f"{conf[entry]['url']}?{nowstrm}"
         localname = f"{entry}/{nowstr}.jpg"
         if verbose:
             print(f"getting {localname} from {url}")
-        _,result = urllib.request.urlretrieve(url, localname)
+        try:
+            _,result = urllib.request.urlretrieve(url, localname)
+        except:
+            print(f"Error retrieving {url=} to {localname=}")
+            print("Continuing to next entry")
+            continue
         if verbose:
             print(f"{result.as_string(unixfrom=True)=}")
-        if not keep:
+        if not keep and latest_file:
             if verbose:
-                print("Checking if latest image is new or not")
+                print("Checking if latest image is new")
+            clobber_duplicate(localname,latest_file,verbose)
 
+
+def clobber_duplicate(fn,latest,verbose):
+    im1 = Image.open(fn)
+    im2 = Image.open(latest)
+
+    if list(im1.getdata()) == list(im2.getdata()):
+        print(f"New image is duplicate of last image {latest}, removing {fn}")
+    else:
+        if verbose:
+            print("New image {fn} is different from {latest}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
