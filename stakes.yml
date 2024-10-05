@@ -10,16 +10,24 @@ breckenridge:
   url: https://webcams.opensnow.com/current/607.jpg
 buttermilk:
   url: https://webcams.opensnow.com/current/3029.jpg
+crestedbutte:
+  url: https://webcams.opensnow.com/current/2467.jpg
 copper:
-  url: https://webcams.opensnow.com/current/3625.jpg
+  url: https://webcams.opensnow.com/current/1960.jpg
 keystone:
   url: https://webcams.opensnow.com/current/606.jpg
+loveland:
+  url: https://webcams.opensnow.com/current/3157.jpg
 monarch:
   url: https://webcams.opensnow.com/current/2593.jpg
+monarchstorm:
+  url: https://webcams.opensnow.com/current/2601.jpg
 powderhorn:
   url: https://webcams.opensnow.com/current/1986.jpg
 purgatory:
   url: https://webcams.opensnow.com/current/493.jpg
+skicooper:
+  url: https://webcams.opensnow.com/current/1771.jpg
 snowmass:
   url: https://webcams.opensnow.com/current/2697.jpg
 steamboatsummit:
@@ -28,6 +36,8 @@ steamboatmid:
   url: https://webcams.opensnow.com/current/2780.jpg
 sunlight:
   url: https://webcams.opensnow.com/current/3337.jpg
+telluride:
+  url: https://webcams.opensnow.com/current/1247.jpg
 vailmid:
   url: https://webcams.opensnow.com/current/2452.jpg
 vailbluesky:
