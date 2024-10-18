@@ -54,9 +54,10 @@ def clobber_duplicate(fn,latest,verbose):
 
     if list(im1.getdata()) == list(im2.getdata()):
         print(f"New image is duplicate of last image {latest}, removing {fn}")
+        os.remove(fn)
     else:
         if verbose:
-            print("New image {fn} is different from {latest}")
+            print(f"New image {fn} is different from {latest}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
